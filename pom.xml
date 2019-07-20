@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -7,12 +8,12 @@
 	<!-- 支持tomcat部署 -->
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	
+
 	<properties>
 		<!-- java版本 -->
 		<java.version>1.8</java.version>
 	</properties>
-	
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -25,6 +26,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- aop -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
 		<!-- junit单元测试 -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -33,13 +39,11 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
-<!-- 			spring-boot-maven-plugin提供很多方便特性：
-			1.收集所有jar包构建成单一可运行的包；
-			2.自动搜索main方法；
-			3.提供内置依赖解决方案； -->
+			<!-- spring-boot-maven-plugin提供很多方便特性： 1.收集所有jar包构建成单一可运行的包； 2.自动搜索main方法； 
+				3.提供内置依赖解决方案； -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
